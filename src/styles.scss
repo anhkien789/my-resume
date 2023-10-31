@@ -1,0 +1,114 @@
+/* 
+
+Font 
+
+font-family: 'Nunito', sans-serif;
+font-family: 'Spectral', serif;
+
+#1155cc - Bullet point color
+#45818e - Company color
+#b7b7b7 - Footer color
+
+*/
+
+/* Global */
+section {
+  font-family: "Nunito", sans-serif;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  font-family: "Spectral", serif;
+
+  h1 {
+    font-weight: 400;
+  }
+
+  div {
+    display: flex;
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-right: 1px solid black;
+      padding-right: 0.5rem;
+      margin-right: 0.5rem;
+
+      p {
+        margin: 0;
+      }
+
+      &:last-child {
+        border-right: none;
+        margin-right: none;
+      }
+    }
+  }
+}
+
+/* Body */
+main {
+  padding: 1rem 0;
+  font-family: "Nunito", sans-serif;
+
+  .body_heading {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 1rem;
+    color: #1155cc;
+
+    h2 {
+      margin: 0;
+    }
+
+    div {
+      width: 100%;
+      border-bottom: 3px solid #b7b7b7;
+      margin-bottom: 7px;
+    }
+  }
+
+  .body_lists {
+    ul {
+      list-style: none; /* Remove default bullets */
+    }
+
+    ul li::before {
+      content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+      color: #1155cc; /* Change the color */
+      font-weight: bold; /* If you want it to be bold */
+      display: inline-block; /* Needed to add space between the bullet and the text */
+      width: 1em; /* Also needed for space (tweak if needed) */
+      margin-left: -1em; /* Also needed for space (tweak if needed) */
+    }
+  }
+
+  .body_header {
+    .body_header-left {
+      font-weight: bold;
+    }
+    .body_header-middle {
+      text-align: center;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    .body_header-right {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+    }
+  }
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #b7b7b7;
+}
